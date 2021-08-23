@@ -1,4 +1,5 @@
 # Student Assistance Portal
+A platform which empowers students to take part in open discussions and get their queries resolved
 
 * Flow chart
 ![Image of flow chart](./screenshots/flow_chart.png?raw=true)
