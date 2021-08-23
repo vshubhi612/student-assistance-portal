@@ -1,0 +1,64 @@
+{{!-- <h3>Add Story</h3>
+<div class="row">
+    <form action="/stories" method="POST" class="col s12">
+        <div class="row">
+            <div class="input-field">
+                <input type="text" id="title" name="title">
+                <label for="title">Title</label>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="input-field">
+                <select name="status" id="status">
+                    <option value="public" selected>Public</option>
+                    <option value="private">Private</option>
+                </select>
+                <label for="status">Status</label>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="input-field">
+                <h5>What do you have in mind: </h5>
+                <textarea id="body" name="body"></textarea>
+            </div>
+        </div>
+
+        <div class="row">
+            <input type="submit" value="Save" class="btn">
+            <a href="/dashboard" class="btn btn-danger">Cancel</a>
+        </div>
+    </form>
+</div> --}}
+<div class="post-article">
+    <div class="col-md-8 col-md-offset-2 mediaquerydiv" style="margin: auto;">
+        <form action="/articles" method="POST" style="border-radius: 2px; padding: 30px; background-color: #EEEEEE; opacity:96%; border-radius:14px;">
+            <h1 style="margin-bottom: 30px; font-size: 2.5rem; text-align: center; color:rgb(126, 120, 120); font-family:'Ubuntu'; font-weight:bold;">CREATE POST</h1>
+            <div class="form-group" style="margin-bottom: 20px;">
+                <label for="title"><h5>Title</h5></label>
+                <input type="text" class="form-control form-control-lg" name="title" id="title" />
+            </div>
+
+            <div class="form-group" style="margin-bottom: 30px;">
+                <label for="status"><h5>Status</h5></label>
+                <select name="status" id="status" class="form-control form-control-lg">
+                    <option value="public" selected>Public</option>
+                    <option value="private">Private</option>
+                </select>
+            </div>
+            
+            <div class="form-group" style="margin-bottom: 20px;">
+                <label for="description"><h5>Description</h5></label>
+                <textarea rows="5" class="form-control form-control-lg" name="body" id="body"></textarea>
+            </div>
+
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary">
+                <a href="/dashboard" class="btn btn-danger">
+                    Cancel
+                </a>
+            </div>  
+        </form>
+    </div>	
+</div>

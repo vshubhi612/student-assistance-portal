@@ -1,0 +1,72 @@
+{{!-- <h1>Posts</h1>
+<div class="row">
+    {{#each stories}}
+        <div class="col-12 m4">
+            <div class="card">
+                <div class="card-img-top">
+                    {{{editIcon user ../user _id}}}
+                </div>
+                <div class="card-body text-center">
+                    <h5 class="card-title">{{title}}</h5>
+                    <p class="card-text">{{stripTags (truncate body 150)}}</p>
+                    <br>
+                    <div class="badge">
+                        <h6><img src="{{user.image}}" alt="">
+                        <a href="/stories/user/{{user._id}}">{{user.displayName}}</a>
+                        </h6>
+                    </div>
+                </div>
+                <div class="card-body text-center">
+                    <a href="/stories/{{_id}}" class="btn btn-secondary">Read More</a>
+                </div>
+            </div>
+        </div>
+    {{else}}
+        <p>No posts to display</p>
+    {{/each}}
+</div> --}}
+<section id="team" class="pb-5" style="opacity:96%">
+    <div class="container">
+        <h5 class="section-title h1" style="font-family:'Ubuntu'; font-weight:bold;">Posts</h5>
+        <div class="row">
+            {{#each articles}}
+            <div class="col-xs-12 col-sm-6 col-md-4">
+                <div class="image-flip" >
+                    <div class="mainflip flip-0">
+                        <div class="frontside">
+                            <div class="card">
+                                <div class="card-body text-center">
+                                    <p><img class=" img-fluid" src="{{user.image}}" alt="card image"></p>
+                                    <h4 class="card-title">{{user.displayName}}</h4>
+                                </div>
+                                <div class="card-body text-center">
+                                    <p class="card-text" style="font-style: italic;">There might be something in the flip side. Have a look!!</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="backside">
+                            <div class="card">
+                                <div class="card-img-top" style="color: #0069D9;">
+                                    {{{editIcon user ../user _id}}}
+                                 </div>
+                                <div class="card-body text-center mt-4">
+                                    <h4 class="card-title">{{title}}</h4>
+                                    <p class="card-text">{{stripTags (truncate body 150)}}</p>
+                                </div>
+                                <div class="card-body text-center" style="padding-bottom: 0px; margin-top:5px;">
+                                    <a href="/articles/{{_id}}" class="btn btn-primary" style="color: white; width:60%">Read More</a>
+                                </div>
+                                <div class="card-body text-center">
+                                     <a href="/articles/user/{{user._id}}" class="btn btn-success btn-sm" style="color: white;">More from {{user.displayName}}</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {{else}}
+            <p>No posts to display</p>
+            {{/each}}
+        </div>
+    </div>
+</section>
